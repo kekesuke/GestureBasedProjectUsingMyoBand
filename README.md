@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# GestureBasedProjectUsingMyoBand
-=======
 # GestureBasedProjectUsingMyoBand
 ### Dead on Rails
 Author: Emil Parvanov

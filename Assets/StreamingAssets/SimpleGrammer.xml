@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<grammar xml:lang ="en"
+         tag-format="semantics/1.0"
+         version="1.0"
+         xmlns="http://www.w3.org/2001/06/grammar"
+         root="main">
+
+  <rule id="main">
+    <one-of>
+      <item>
+        <ruleref uri="#gamePauseResume" />
+      </item>
+       <item>
+        <ruleref uri="#gameChoice" />
+      </item>
+       <item>
+        <ruleref uri="#startGame" />
+      </item>
+      <item>
+       <ruleref uri="#quitGame" />
+      </item>
+      <item>
+       <ruleref uri="#soundVolume" />
+      </item>
+      <item>
+       <ruleref uri="#optionMenu" />
+      </item>
+      <item>
+       <ruleref uri="#hello" />
+      </item>
+    </one-of> 
+  </rule>
+
+ <rule id="hello">
+    <one-of>
+      <item>
+        <tag>out.action = "hello";</tag> <!-- Pause the game -->
+        <one-of>
+          <item> hi </item>
+          <item> hello</item>
+          <item> hello there </item>
+          <item> how are ya </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="startGame">
+    <one-of>
+      <item>
+        <tag>out.action = "startgame";</tag> <!-- Pause the game -->
+        <one-of>
+          <item> start the game </item>
+          <item> start game </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+    <rule id="quitGame">
+    <one-of>
+      <item>
+        <tag>out.action = "quit";</tag> <!-- Quit the game -->
+        <one-of>
+          <item> exit game </item>
+          <item> exit the game </item>
+          <item> close the game </item>
+          <item> close game </item>
+          <item> quit </item>
+          <item> quit game </item>
+          <item> exit </item>
+          <item> exit game </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="gamePauseResume">
+    <one-of>
+      <item>
+        <tag>out.action = "pause";</tag> <!-- Pause the game -->
+        <one-of>
+          <item> pause </item>
+          <item> pause the game </item>
+          <item> pause game </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>out.action = "resume";</tag> <!-- Resume the game -->
+        <one-of>
+          <item> resume </item>
+          <item> resume the game </item>
+          <item> resume game </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+   <rule id="optionMenu">
+    <one-of>
+      <item>
+        <tag>out.action = "options";</tag> <!-- Open options menu -->
+        <one-of>
+          <item> options </item>
+          <item> open options </item>
+          <item> open the options </item>
+          <item> open the options menu</item>
+        </one-of>
+      </item>
+      <item>
+        <tag>out.action = "back";</tag> <!-- go back -->
+        <one-of>
+          <item> back </item>
+          <item> go back </item>
+        </one-of>
+      </item>
+       <item>
+        <tag>out.action = "mainmenu";</tag> <!-- open mainmenu -->
+        <one-of>
+          <item> main menu </item>
+          <item> menu </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+    <rule id="soundVolume">
+    <one-of>
+      <item>
+        <tag>out.action = "volumeup";</tag> <!-- volume up -->
+        <one-of>
+          <item> volume up</item>
+          <item> increase volume </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>out.action = "volumedown";</tag> <!-- volume down-->
+        <one-of>
+          <item> volume down </item>
+          <item> decrease volume </item>
+        </one-of>
+      </item>
+        <item>
+        <tag>out.action = "stopmusic";</tag> <!--stop music -->
+        <one-of>
+          <item> stop music</item>
+          <item> music off </item>
+          <item> turn off music </item>
+          <item> turn music off</item>
+        </one-of>
+      </item>
+      <item>
+        <tag>out.action = "musicon";</tag> <!-- turn on music -->
+        <one-of>
+          <item> resume music</item>
+          <item> music on </item>
+          <item> turn on music </item>
+          <item> turn music on</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="gameChoice">
+    <one-of>
+      <item>
+        <tag>out.action = "rock";</tag> <!-- player selects rock -->
+        <one-of>
+          <item> rock </item>
+          <item> I want rock</item>
+          <item> choose rock</item>
+          <item> select rock</item>
+        </one-of>
+      </item>
+      <item>
+        <tag>out.action = "paper";</tag> <!-- player selects paper -->
+        <one-of>
+          <item> paper </item>
+          <item> I want paper</item>
+          <item> choose paper</item>
+          <item> select paper</item>
+        </one-of>
+      </item>
+      <item>
+        <tag>out.action = "scissors";</tag> <!-- player selects Scissors -->
+        <one-of>
+          <item> scissors </item>
+          <item> I want scissors</item>
+          <item> choose scissors</item>
+          <item> select scissors</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+</grammar>

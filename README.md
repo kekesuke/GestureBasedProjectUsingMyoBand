@@ -99,4 +99,3 @@ The voice commands are as follows. When the user has a microphone when the user 
 
 #### Conclusions & Recommendations
 To conclude we feel like we accomplished the goal of creating an AR controlled rails shooter with a fun and responsive interface. Some of the most difficult work was not in the development of the project, but more so in research process of determining what hardware best suited the application, parsing out the relevant gestures and determining what functionality they were best suited too in order too create both a comfortable and logical process for interacting with the menus and the game. Some recommendations for this project would have been too limit the scope of the project to allow for a more full experience and focus on the lengthening the playable content rather than the addition of excess features so the user gets too spend more time in the world rather then limited exposure too each feature
->>>>>>> e2513de (late uploading of the project)
